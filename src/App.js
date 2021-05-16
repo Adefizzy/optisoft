@@ -1,57 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, { useState, useEffect } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { darkTheme, lightTheme, GlobalStyle } from './globalAsset/themes';
+import { Row } from 'antd';
 import './App.css';
+import { TopBar } from './Components/TopBar/index';
+import { Banner } from './Components/Banner/index';
+import { Switch, Route } from 'react-router-dom';
+import { PopularCat } from './Components/PopularCat/index';
 
 function App() {
+  const [isLight, setThemeState] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <ThemeProvider theme={isLight ? lightTheme : darkTheme}>
+      <GlobalStyle />
+      <Switch>
+        <Route path='/'>
+          <Row>
+            <TopBar />
+            <Banner />
+            <PopularCat />
+          </Row>
+        </Route>
+      </Switch>
+    </ThemeProvider>
   );
 }
 
