@@ -3,7 +3,7 @@ import cosmetics from '../../images/cometics.png';
 import phone from '../../images/Ellipse 9.png'
 import fashion from '../../images/Ellipse 8.png';
 import electronics from '../../images/Ellipse 7.png';
-import { StyledContainer, StyledSingleItem } from './style';
+import { StyledSingleItem } from './style';
 import { ItemContainer } from '../../globalComponents/ItemContainer';
 
 

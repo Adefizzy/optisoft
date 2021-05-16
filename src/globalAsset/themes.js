@@ -14,7 +14,8 @@ export const lightTheme = {
     textColor:'#2C3452',
     icon: '#457E6A',
     primaryColor2: '#F03800',
-    highlight: '#F5F5F5',
+    highlight: '#C5C5C5',
+    green: '#45B75E',
     /* shadow: "0px 2px 2px 1px rgb(204 204 204)", */
     shadow: "drop-shadow(0px 4px 20px rgba(201, 201, 201, 0.25))",
     border: '#B7ABAB',
@@ -39,6 +40,7 @@ export const darkTheme = {
     shadow: 'none',
     border: '#fff',
     invertedBackground: '#fff', 
+    green: '#45B75E',
 }
 
 export const GlobalStyle = createGlobalStyle`

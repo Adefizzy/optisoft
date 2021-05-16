@@ -7,6 +7,9 @@ import { TopBar } from './Components/TopBar/index';
 import { Banner } from './Components/Banner/index';
 import { Switch, Route } from 'react-router-dom';
 import { PopularCat } from './Components/PopularCat/index';
+import { BestSeller } from './Components/BestSeller/index';
+import { DealOfTheDay } from './Components/BestSeller/DealOfTheDay';
+
 
 function App() {
   const [isLight, setThemeState] = useState(true);
@@ -16,10 +19,12 @@ function App() {
       <GlobalStyle />
       <Switch>
         <Route path='/'>
-          <Row>
+          <Row >
             <TopBar />
             <Banner />
             <PopularCat />
+            <BestSeller/>
+            <DealOfTheDay/>
           </Row>
         </Route>
       </Switch>
