@@ -7,11 +7,17 @@ import { device } from '../../globalAsset/breakpoints';
 
 
 export const StyledSingleItem = styled.div`
-    flex-basis: 12%;
+    flex-basis: 15%;
     text-align: center;
 
     &:first-child{
         margin-left: 0;
+    }
+
+    & > div{
+        & img{
+        width: 70%;
+    }
     }
 
     & p{
@@ -22,9 +28,7 @@ export const StyledSingleItem = styled.div`
     }
 
 
-    & img{
-        width: 87%;
-    }
+   
 
     @media ${device.laptop}{
         & p{

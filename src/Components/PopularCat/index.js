@@ -52,7 +52,9 @@ export const PopularCat = (props) => {
 const SingleItem = (props) => {
     return (
         <StyledSingleItem>
-            <img src={props.data.image} alt='phone and accessories'/>
+            <div>
+                <img src={props.data.image} alt='phone and accessories'/>
+            </div>
             <p>{props.data.name}</p>
         </StyledSingleItem>
     )

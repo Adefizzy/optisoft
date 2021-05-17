@@ -15,27 +15,41 @@ export const StyledContainer = styled(Col)`
     ${getCenter({justifyContent: 'space-between', flexWrap: 'nowrap'})};
     margin-top: 40px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 29px;
     color: ${props => props.theme.textColor};
 
     & > div:first-child{
-        flex-basis: 30%;
+        flex-basis: 25%;
     }
     & > div:nth-child(2){
-        flex-basis: 50%;
-        ${getCenter({justifyContent: 'space-between'})};
+        flex-basis: 55%;
+        ${getCenter({justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'nowrap'})};
+        & > div{
+    
+        }
     }
 
     @media ${device.laptop}{
-        font-size: 0.9vw;
+        font-size: 1vw;
         line-height: 2vw;
     }
 `
 
 export const StyledUnderline = styled.div`
-    width: 30%;
+    width: 2vw;
     padding: 1px;
     background-color: ${props => props.theme.primaryColor2};
     margin-bottom: 15px;
+`
+export const StyledLocationDiv = styled.div`
+    ${getCenter({flexWrap: 'nowrap'})};
+
+    & >div{
+        flex-basis: 43%;
+    }
+
+    & > div:first-child{
+        margin-right: 20px;
+    }
 `

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme, GlobalStyle } from './globalAsset/themes';
-import { Row } from 'antd';
+import { Row, Divider } from 'antd';
 import './App.css';
 import { TopBar } from './Components/TopBar/index';
 import { Banner } from './Components/Banner/index';
@@ -12,6 +12,8 @@ import { DealOfTheDay } from './Components/BestSeller/DealOfTheDay';
 import { AdBanner } from './Components/AdBanner/index';
 import { NewsLetter } from './Components/NewLetter/index';
 import { BottomInfo } from './Components/BottomInfo/index';
+import { Services } from './Components/Services/index';
+import { Footer } from './Components/Footer/index';
 
 function App() {
   const [isLight, setThemeState] = useState(true);
@@ -30,6 +32,9 @@ function App() {
             <DealOfTheDay/>
             <NewsLetter/>
             <BottomInfo/>
+            <Services/>
+            <Divider/>
+            <Footer/>
           </Row>
         </Route>
       </Switch>
