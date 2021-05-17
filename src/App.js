@@ -9,6 +9,8 @@ import { Switch, Route } from 'react-router-dom';
 import { PopularCat } from './Components/PopularCat/index';
 import { BestSeller } from './Components/BestSeller/index';
 import { DealOfTheDay } from './Components/BestSeller/DealOfTheDay';
+import { AdBanner } from './Components/AdBanner/index';
+import { NewsLetter } from './Components/NewLetter/index';
 
 
 function App() {
@@ -24,7 +26,9 @@ function App() {
             <Banner />
             <PopularCat />
             <BestSeller/>
+            <AdBanner/>
             <DealOfTheDay/>
+            <NewsLetter/>
           </Row>
         </Route>
       </Switch>
