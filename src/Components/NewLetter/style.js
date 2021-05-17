@@ -50,6 +50,14 @@ export const StyledSocialMediaContainer = styled.div`
 
     & p{
         margin-bottom: 0px;
+        font-size: 14px;
+    }
+
+    @media ${device.laptop}{
+        & p{
+            margin-bottom: 0px;
+            font-size: 0.9vw;
+        }
     }
 `
 
@@ -69,6 +77,17 @@ export const StyledTitleDiv = styled.div`
     & p{
         color: ${props => props.theme.white};
         font-size: 14px;
+    }
+
+    @media ${device.laptop}{
+        & h4{
+            font-size: 1.8vw;
+        }
+
+    & p{
+        
+        font-size: 0.9vw;
+        }
     }
 `
 

@@ -11,7 +11,7 @@ import { BestSeller } from './Components/BestSeller/index';
 import { DealOfTheDay } from './Components/BestSeller/DealOfTheDay';
 import { AdBanner } from './Components/AdBanner/index';
 import { NewsLetter } from './Components/NewLetter/index';
-
+import { BottomInfo } from './Components/BottomInfo/index';
 
 function App() {
   const [isLight, setThemeState] = useState(true);
@@ -29,6 +29,7 @@ function App() {
             <AdBanner/>
             <DealOfTheDay/>
             <NewsLetter/>
+            <BottomInfo/>
           </Row>
         </Route>
       </Switch>
